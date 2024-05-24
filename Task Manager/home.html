@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Task Management Dashboard</title> 
+<link rel="stylesheet" href="home.css">
+</head>
+<body> 
+    <div id="app"> 
+        <h1>Task Management Dashboard</h1> 
+        <input type="text" id="taskTitle" placeholder="Task Title"> 
+        <input type="text" id="taskDescription" placeholder="Task Description"> 
+        <input type="date" id="taskDueDate"> 
+        <label for="taskCategory">Category:</label>
+        <select id="taskCategory">
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <!-- Add more categories as needed -->
+        </select>
+        <label for="taskPriority">Priority:</label>
+        <select id="taskPriority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <button id="addTaskButton">Add Task</button> 
+        
+        <!-- Filters -->
+         
+        <div id="filters"> 
+            <input type="text" id="filterTitle" placeholder="Filter by Title"> 
+            <input type="date" id="filterDueDate"> 
+            <select id="filterPriority">
+                <option value="All">All</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </div> 
+    <!-- Sorting Options --> 
+        <div id="sortOptions"> 
+            <select id="sortTasks"> 
+                <option value="alphabetical">Alphabetical (A-Z)</option> 
+                <option value="reverseAlphabetical">Reverse Alphabetical (Z-A)</option> 
+                <option value="soonest">Soonest to Latest</option> 
+                <option value="latest">Latest to Soonest</option> 
+            </select> 
+        </div> 
+        <div id="taskList"></div>
+    </div>
+<script src="home.js"></script>
+</body>
+</html>
